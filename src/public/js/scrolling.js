@@ -19,6 +19,10 @@ window.addEventListener("load", function(e) {
 
 }, false);
 
+/**
+ * de/activation of autoscrolling
+ * @param {property activates or deactivates autoscrolling} value 
+ */
 const setAutoScrolling = (value) => {
     const button = document.getElementById("keepScrolling");        
     if (value) {
@@ -31,12 +35,19 @@ const setAutoScrolling = (value) => {
     }
 }
 
+/**
+ * responsible for setting autoscrolling
+ * @param {event fired during click} event 
+ */
 const keepScrolling = (event) => {
     event.preventDefault();
     setAutoScrolling(true);  
     scrollDown();      
 }
 
+/**
+ * scroll down in document
+ */
 const scrollDown = () => {
     document.documentElement.scrollTop = document.documentElement.scrollHeight;
 }

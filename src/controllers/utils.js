@@ -1,15 +1,36 @@
+/**
+ * Container Url provider
+ * @param {human readable container name} containerName 
+ * @returns url to container page
+ */
 const getContainerUrl = (containerName) => {
     return `/container/${containerName}/`;
 }
 
+/**
+ * Container event stream url
+ * @param {human readable container name} containerName 
+ * @returns access to event stream
+ */
 const getContainerLogUrl = (containerName) => {
     return `/container/${containerName}/stream`;
 }
 
+/**
+ * HTML A tag with container url
+ * @param {human readable container name} containerName 
+ * @returns html A tag with access to container page
+ */
 const createContainerLink = (containerName) => {
     return `<a href='${getContainerUrl(containerName)}'>${containerName}</a>`;
 }
 
+/**
+ * Container Id by its name
+ * @param {docker object} docker 
+ * @param {human readable container name} searchedName 
+ * @returns unique identifier of container
+ */
 const getContainerIdByName = async (docker, searchedName) => {
     const containers = await docker.listContainers();
     return containers.find((containerInfo) => {
@@ -20,10 +41,10 @@ const getContainerIdByName = async (docker, searchedName) => {
 }
 
 /**
- * 
- * @param {message to be distributed vias sse} chunk 
+ * create message payload
+ * @param {message to be distributed via sse} chunk 
  * @param {type of message} type 
- * @returns 
+ * @returns payload for sse stream
  */
 const getMessagePayload = (chunk, type) => {
     const isoDate = new Date().toISOString();

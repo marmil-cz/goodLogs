@@ -15,7 +15,7 @@ async function getLogPage(req, res, next) {
   const url = `event-stream`;
   res
     .status(200)
-    .send( viewController.logPage(url) );
+    .send( viewController.containerLogPage(url) );
 };
 
 /**
