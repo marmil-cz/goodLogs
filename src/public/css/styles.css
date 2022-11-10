@@ -1,0 +1,43 @@
+body {
+    background-color: #000;
+    color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    position: relative;
+}
+
+ul.eventStream, li {
+    list-style: none;
+    margin: 0px;
+    padding: 1px 0px;
+}
+
+ul.eventStream li i {
+    color: #c19c05;
+}
+
+ul.eventStream li.stderr {
+    color: #e6483f;
+}
+
+ul.eventStream li.system {
+    font-weight: bold;
+    padding: 15px 0px;
+    color: blue;
+}
+
+ul.eventStream strong.error {
+    display: block;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+#keepScrolling {
+    background-color: yellowgreen;
+    color: black;
+    padding: 20px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
