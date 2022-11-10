@@ -26,7 +26,7 @@ const getContainerIdByName = async (docker, searchedName) => {
  * @returns 
  */
 const getMessagePayload = (chunk, type) => {
-    var isoDate = new Date().toISOString();
+    const isoDate = new Date().toISOString();
     const str = chunk.toString('utf8');
 
     const output = {
