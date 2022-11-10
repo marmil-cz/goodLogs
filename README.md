@@ -16,8 +16,8 @@ Open application in web browser:
 ### 2) Docker Container  
   
 Build docker image:  
-``docker build -t goodlog/goodlog .``  
+``docker build -t goodlogs/goodlogs .``  
 Launch docker container from prepared image:  
-``docker run -it --rm  -p 8089:8089 -v /var/run/docker.sock:/var/run/docker.sock goodlog/goodlog``  
+``docker run -it --rm  -p 8089:8089 -v /var/run/docker.sock:/var/run/docker.sock goodlogs/goodlogs``  
 Open application in web browser:  
 ``http://localhost:8089/``  
