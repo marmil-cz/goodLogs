@@ -36,7 +36,7 @@ ul.eventStream strong.error {
     background-color: yellowgreen;
     color: black;
     padding: 20px;
-    display: block;
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;

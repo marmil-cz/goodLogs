@@ -27,7 +27,7 @@ const logPage = (url) => {
         }
         else {
           userMove = true;
-          button.setAttribute("style", "display: true" )
+          button.setAttribute("style", "display: block" )
         }
       }
 
